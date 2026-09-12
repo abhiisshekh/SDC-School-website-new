@@ -1,33 +1,16 @@
-/* Hero entrance: one staggered fade + rise on page load */
-.hero-fade {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: heroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-.hero-fade:nth-child(1) { animation-delay: 0.1s; }
-.hero-fade:nth-child(2) { animation-delay: 0.22s; }
-.hero-fade:nth-child(3) { animation-delay: 0.34s; }
-.hero-fade:nth-child(4) { animation-delay: 0.46s; }
-.hero-fade:nth-child(5) { animation-delay: 0.58s; }
+.hero-fade{opacity:0;transform:translateY(20px);animation:heroIn .7s cubic-bezier(.22,1,.36,1) forwards}
+.hero-fade:nth-child(1){animation-delay:.1s}
+.hero-fade:nth-child(2){animation-delay:.2s}
+.hero-fade:nth-child(3){animation-delay:.3s}
+.hero-fade:nth-child(4){animation-delay:.4s}
+.hero-fade:nth-child(5){animation-delay:.5s}
+@keyframes heroIn{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.hero-fade{animation:none!important;opacity:1!important;transform:none!important}}
+#mobile-panel{max-height:0;transition:max-height .25s ease-in-out}
+#mobile-panel.open{max-height:28rem}
+a:focus-visible,button:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}
 
-@keyframes heroIn {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-fade {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-/* Mobile nav panel */
-#mobile-panel { max-height: 0; transition: max-height 0.25s ease-in-out; }
-#mobile-panel.open { max-height: 24rem; }
-
-/* Keyboard focus */
-a:focus-visible, button:focus-visible {
-  outline: 2px solid #D4A843;
-  outline-offset: 2px;
-}
+/* Marquee scroll */
+.marquee{animation:scroll 25s linear infinite;width:max-content}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee:hover{animation-play-state:paused}
