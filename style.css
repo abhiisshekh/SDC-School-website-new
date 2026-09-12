@@ -1,48 +1,33 @@
-/* -----------------------------------------------------------------------
-   A few things Tailwind's utility classes can't express on their own:
-   the hero's one-time entrance animation and the mobile menu's slide.
-   ----------------------------------------------------------------------- */
-
-/* Hero entrance: one staggered fade + rise on page load. */
-.hero-fade > * {
+/* Hero entrance: one staggered fade + rise on page load */
+.hero-fade {
   opacity: 0;
-  transform: translateY(18px);
-  animation: heroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translateY(24px);
+  animation: heroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
-.hero-fade > *:nth-child(1) { animation-delay: 0.15s; }
-.hero-fade > *:nth-child(2) { animation-delay: 0.27s; }
-.hero-fade > *:nth-child(3) { animation-delay: 0.39s; }
-.hero-fade > *:nth-child(4) { animation-delay: 0.51s; }
+.hero-fade:nth-child(1) { animation-delay: 0.1s; }
+.hero-fade:nth-child(2) { animation-delay: 0.22s; }
+.hero-fade:nth-child(3) { animation-delay: 0.34s; }
+.hero-fade:nth-child(4) { animation-delay: 0.46s; }
+.hero-fade:nth-child(5) { animation-delay: 0.58s; }
 
 @keyframes heroIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Respect people who've asked their OS/browser to reduce motion. */
 @media (prefers-reduced-motion: reduce) {
-  .hero-fade > * {
+  .hero-fade {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
 }
 
-/* Mobile nav panel: collapsed by default, expands via JS toggling .open. */
-#mobile-panel {
-  max-height: 0;
-  transition: max-height 0.25s ease-in-out;
-}
-#mobile-panel.open {
-  max-height: 24rem;
-}
+/* Mobile nav panel */
+#mobile-panel { max-height: 0; transition: max-height 0.25s ease-in-out; }
+#mobile-panel.open { max-height: 24rem; }
 
-/* Visible keyboard focus everywhere, even on elements without an explicit
-   focus-visible utility class. */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #b08d2b;
+/* Keyboard focus */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #D4A843;
   outline-offset: 2px;
 }
