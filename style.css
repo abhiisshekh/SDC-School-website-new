@@ -1,16 +1,21 @@
-.hero-fade{opacity:0;transform:translateY(20px);animation:heroIn .7s cubic-bezier(.22,1,.36,1) forwards}
-.hero-fade:nth-child(1){animation-delay:.1s}
-.hero-fade:nth-child(2){animation-delay:.2s}
-.hero-fade:nth-child(3){animation-delay:.3s}
-.hero-fade:nth-child(4){animation-delay:.4s}
-.hero-fade:nth-child(5){animation-delay:.5s}
-@keyframes heroIn{to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.hero-fade{animation:none!important;opacity:1!important;transform:none!important}}
-#mobile-panel{max-height:0;transition:max-height .25s ease-in-out}
-#mobile-panel.open{max-height:28rem}
-a:focus-visible,button:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}
+.hero-el{opacity:0;transform:translateY(24px);animation:fadeUp .8s cubic-bezier(.22,1,.36,1) forwards}
+.hero-el:nth-child(1){animation-delay:.2s}
+.hero-el:nth-child(2){animation-delay:.4s}
+.hero-el:nth-child(3){animation-delay:.6s}
+.hero-el:nth-child(4){animation-delay:.8s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.hero-el{animation:none!important;opacity:1!important;transform:none!important}}
 
-/* Marquee scroll */
-.marquee{animation:scroll 25s linear infinite;width:max-content}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.marquee:hover{animation-play-state:paused}
+#mobile-panel{max-height:0;transition:max-height .3s ease}
+#mobile-panel.open{max-height:28rem}
+
+a:focus-visible,button:focus-visible{outline:2px solid #0d7377;outline-offset:2px}
+
+/* Navbar: transparent on top, glass when scrolled */
+#navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 1px 8px rgba(0,0,0,.05)}
+#navbar.scrolled #brand-main{color:#1a2744}
+#navbar.scrolled #brand-sub{color:rgba(26,39,68,.5)}
+#navbar.scrolled #nav-links{color:rgba(26,39,68,.6)}
+#navbar.scrolled #nav-links a:hover{color:#1a2744}
+#navbar.scrolled #nav-cta{background:#1a2744;color:#fff}
+#navbar.scrolled #menu-btn{color:#1a2744}
