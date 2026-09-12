@@ -7,296 +7,250 @@
 <meta name="description" content="Swami Dayanand Saraswati Sr. Sec. School, Bolni, Dist. Rewari, Haryana 123401. Senior Secondary education with values and discipline."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config={theme:{extend:{
   colors:{
-    brand:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e3a5f',900:'#0f2137'},
-    accent:{DEFAULT:'#f59e0b',light:'#fbbf24',dark:'#d97706'},
-    success:'#10b981',
+    dark:'#1a2744',
+    teal:{DEFAULT:'#0d7377',light:'#e6f4f4'},
+    gold:{DEFAULT:'#c8a951',light:'#faf3e0'},
   },
-  fontFamily:{sans:['DM Sans','sans-serif'],display:['Playfair Display','serif']},
+  fontFamily:{
+    serif:['Libre Baskerville','Georgia','serif'],
+    sans:['Outfit','sans-serif'],
+  },
 }}};
 </script>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="bg-white font-sans text-gray-800 antialiased">
+<body class="bg-white font-sans text-gray-700 antialiased">
 
 <!-- ============================== NAVBAR ============================== -->
-<header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-xl transition-shadow duration-300">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-10">
+<header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
     <a href="#top" class="flex items-center gap-3">
-      <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 shadow-lg shadow-brand-600/30">
-        <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4"/><path d="M22 9v6"/></svg>
-      </span>
+      <img src="https://img.icons8.com/ios-filled/50/1a2744/school-building.png" alt="" class="h-10 w-10 rounded-xl object-contain p-1"/>
       <span class="leading-tight">
-        <span class="block text-[17px] font-bold text-brand-900 sm:text-[19px]">Swami Dayanand Saraswati</span>
-        <span class="block text-[12px] font-semibold text-brand-600 sm:text-[13px]">Sr. Sec. School, Bolni</span>
+        <span id="brand-main" class="block text-[17px] font-bold text-white sm:text-[19px]">Swami Dayanand Saraswati</span>
+        <span id="brand-sub" class="block text-[11px] font-medium tracking-wider text-white/60">SR. SEC. SCHOOL · BOLNI</span>
       </span>
     </a>
-    <ul class="hidden items-center gap-7 text-[14px] font-semibold text-gray-500 lg:flex">
-      <li><a href="#top" class="transition-colors hover:text-brand-700">Home</a></li>
-      <li><a href="#about" class="transition-colors hover:text-brand-700">About</a></li>
-      <li><a href="#academics" class="transition-colors hover:text-brand-700">Academics</a></li>
-      <li><a href="#admissions" class="transition-colors hover:text-brand-700">Admissions</a></li>
-      <li><a href="#notices" class="transition-colors hover:text-brand-700">Notices</a></li>
+    <ul id="nav-links" class="hidden items-center gap-8 text-[14px] font-medium text-white/80 lg:flex">
+      <li><a href="#top" class="transition hover:text-white">Home</a></li>
+      <li><a href="#about" class="transition hover:text-white">About</a></li>
+      <li><a href="#why" class="transition hover:text-white">Why Us</a></li>
+      <li><a href="#academics" class="transition hover:text-white">Academics</a></li>
+      <li><a href="#notices" class="transition hover:text-white">Notices</a></li>
     </ul>
-    <a href="#contact" class="hidden items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-700 px-6 py-2.5 text-[14px] font-bold text-white shadow-lg shadow-brand-600/30 transition-all hover:scale-[1.03] hover:shadow-xl lg:inline-flex">
-      Contact Us
-      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 lg:hidden">
+    <a href="#contact" id="nav-cta" class="hidden rounded-full bg-white px-6 py-2.5 text-[13px] font-semibold text-dark shadow-lg transition-all hover:scale-[1.03] lg:inline-block">Contact Us</a>
+    <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="rounded-lg p-2 text-white lg:hidden">
       <svg id="icon-menu" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
     </button>
   </nav>
-  <div id="mobile-panel" class="overflow-hidden border-t border-gray-100 bg-white lg:hidden">
-    <ul class="flex flex-col gap-1 px-5 py-4">
-      <li><a href="#top" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-gray-700 hover:bg-brand-50">Home</a></li>
-      <li><a href="#about" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-gray-700 hover:bg-brand-50">About</a></li>
-      <li><a href="#academics" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-gray-700 hover:bg-brand-50">Academics</a></li>
-      <li><a href="#admissions" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-gray-700 hover:bg-brand-50">Admissions</a></li>
-      <li><a href="#notices" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-gray-700 hover:bg-brand-50">Notices</a></li>
-      <li class="pt-2"><a href="#contact" class="mobile-link block rounded-full bg-brand-600 px-4 py-2.5 text-center text-sm font-bold text-white">Contact Us</a></li>
+  <div id="mobile-panel" class="overflow-hidden bg-white lg:hidden">
+    <ul class="flex flex-col gap-1 px-6 py-4">
+      <li><a href="#top" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Home</a></li>
+      <li><a href="#about" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">About</a></li>
+      <li><a href="#why" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Why Us</a></li>
+      <li><a href="#academics" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Academics</a></li>
+      <li><a href="#notices" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Notices</a></li>
+      <li class="pt-2"><a href="#contact" class="mobile-link block rounded-full bg-dark px-4 py-2.5 text-center text-sm font-semibold text-white">Contact Us</a></li>
     </ul>
   </div>
 </header>
 
 <!-- ================================ HERO ================================ -->
-<section id="top" class="relative overflow-hidden bg-brand-50 pt-20">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-5 py-16 lg:grid-cols-2 lg:gap-12 lg:px-10 lg:py-24">
-    <!-- Left: Text -->
-    <div class="hero-fade relative z-10">
-      <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-4 py-1.5 shadow-sm">
-        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-success"></span></span>
-        <span class="text-[12px] font-bold text-brand-700">Admissions Open 2026-27</span>
-      </div>
-      <h1 class="hero-fade font-display text-[2rem] font-extrabold leading-[1.15] text-brand-900 sm:text-[2.5rem] lg:text-[3rem]">
-        Where Young Minds<br/>
-        <span class="text-brand-600">Discover Their Potential</span>
-      </h1>
-      <p class="hero-fade mt-5 max-w-md text-[15px] leading-relaxed text-gray-500">
-        Swami Dayanand Saraswati Sr. Sec. School has been nurturing students from Class I to XII with quality education, discipline, and values in Bolni, Rewari.
-      </p>
-      <div class="hero-fade mt-8 flex flex-wrap items-center gap-3">
-        <a href="#admissions" class="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-brand-700 px-7 py-3.5 text-[14px] font-bold text-white shadow-lg shadow-brand-600/30 transition-all hover:scale-[1.03] hover:shadow-xl">
-          Explore Admissions
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="tel:+919416816421" class="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 bg-white px-6 py-3 text-[14px] font-bold text-brand-700 transition-all hover:border-brand-300 hover:shadow-md">
-          <svg class="h-4 w-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
-          094168 16421
-        </a>
-      </div>
-      <!-- Mini stats -->
-      <div class="hero-fade mt-10 flex flex-wrap items-center gap-6 border-t border-brand-100 pt-7">
-        <div><p class="text-2xl font-extrabold text-brand-900">25<span class="text-brand-600">+</span></p><p class="text-[11px] font-semibold text-gray-400">Years of Trust</p></div>
-        <div class="h-8 w-px bg-brand-100"></div>
-        <div><p class="text-2xl font-extrabold text-brand-900">I–XII</p><p class="text-[11px] font-semibold text-gray-400">All Classes</p></div>
-        <div class="h-8 w-px bg-brand-100"></div>
-        <div><p class="text-2xl font-extrabold text-brand-900">HBSE</p><p class="text-[11px] font-semibold text-gray-400">Board Affiliated</p></div>
-      </div>
+<section id="top" class="relative flex min-h-screen items-center justify-center overflow-hidden bg-dark">
+  <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80" alt="School campus" class="absolute inset-0 h-full w-full object-cover opacity-35"/>
+  <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-dark/40"></div>
+  <div class="relative z-10 mx-auto max-w-4xl px-6 py-32 text-center">
+    <p class="hero-el mb-8 text-[13px] font-semibold tracking-[0.25em] text-gold">SWAMI DAYANAND SARASWATI SR. SEC. SCHOOL</p>
+    <h1 class="hero-el font-serif text-[2rem] font-normal italic leading-snug text-white sm:text-[2.5rem] lg:text-[3.2rem]">
+      "A school where learning inspires curiosity, builds character,
+      and prepares children for life beyond classrooms"
+    </h1>
+    <p class="hero-el mx-auto mt-6 max-w-lg text-[15px] leading-relaxed text-white/55">
+      Senior Secondary education in Bolni, Rewari — rooted in the values of Swami Dayanand Saraswati, shaping young minds for over 25 years.
+    </p>
+    <div class="hero-el mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="#admissions" class="rounded-full bg-gold px-8 py-3.5 text-[14px] font-semibold text-dark transition-all hover:scale-[1.03] hover:bg-gold-light">Explore Admissions</a>
+      <a href="#about" class="rounded-full border border-white/25 px-8 py-3.5 text-[14px] font-medium text-white transition-all hover:bg-white/10">Learn More</a>
     </div>
-    <!-- Right: Hero Image -->
-    <div class="hero-fade relative">
-      <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/20">
-        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80" alt="School campus" class="aspect-[4/3] w-full object-cover"/>
-        <!-- Floating badge on image -->
-        <div class="absolute bottom-4 left-4 flex items-center gap-2 rounded-2xl bg-white/90 px-4 py-2.5 shadow-lg backdrop-blur-md">
-          <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10">
-            <svg class="h-5 w-5 text-accent-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="8" r="5"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
-          </div>
-          <div>
-            <p class="text-[13px] font-bold text-brand-900">A+ Results</p>
-            <p class="text-[10px] font-medium text-gray-400">Consistent Board Performance</p>
-          </div>
-        </div>
-      </div>
-      <!-- Decorative blobs -->
-      <div class="absolute -right-6 -top-6 -z-10 h-32 w-32 rounded-full bg-accent/20 blur-2xl"></div>
-      <div class="absolute -bottom-4 -left-4 -z-10 h-24 w-24 rounded-full bg-brand-200 blur-2xl"></div>
+  </div>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
+    <div class="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/25 p-1.5"><div class="h-2 w-1 animate-bounce rounded-full bg-white/60"></div></div>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ================================ -->
+<section id="about" class="mx-auto max-w-6xl px-6 py-24 lg:px-10">
+  <div class="mx-auto max-w-3xl text-center">
+    <p class="mb-4 text-[12px] font-semibold tracking-[0.2em] text-teal">ABOUT OUR SCHOOL</p>
+    <h2 class="font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Stories That Inspire</h2>
+    <p class="mx-auto mt-5 max-w-2xl text-[15px] leading-[1.8] text-gray-500">
+      We are committed to providing quality education, nurturing young minds, and equipping our students to become responsible citizens and confident individuals. Located on Kseri-Motla Road, Bolni, our school blends academics with values — creating a space where every child matters.
+    </p>
+  </div>
+  <!-- Stats -->
+  <div class="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-dark">25<span class="text-teal">+</span></p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">Years of Trust</p>
+    </div>
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-dark">I–XII</p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">All Classes</p>
+    </div>
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-dark">HBSE</p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">Board Affiliated</p>
+    </div>
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-teal">95%</p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">Pass Rate</p>
     </div>
   </div>
 </section>
 
-<!-- ========================== MARQUEE STRIP ============================= -->
-<div class="overflow-hidden border-y border-brand-100 bg-white py-4">
-  <div class="marquee flex items-center gap-12 whitespace-nowrap text-[14px] font-bold text-brand-800">
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>Senior Secondary School</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent"></span>HBSE Affiliated</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-success"></span>Classes I to XII</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span>Experienced Faculty</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>Annual Sports Day</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent"></span>Value-Based Education</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-success"></span>Bolni, Rewari</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span>25+ Years Legacy</span>
-    <!-- duplicate for seamless loop -->
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-600"></span>Senior Secondary School</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent"></span>HBSE Affiliated</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-success"></span>Classes I to XII</span>
-    <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-purple-500"></span>Experienced Faculty</span>
-  </div>
-</div>
-
-<!-- ============================= ABOUT ================================ -->
-<section id="about" class="mx-auto max-w-7xl px-5 py-20 lg:px-10">
-  <div class="mx-auto max-w-3xl text-center">
-    <p class="mb-3 text-[12px] font-bold tracking-widest text-brand-600">ABOUT OUR SCHOOL</p>
-    <h2 class="font-display text-2xl font-bold text-brand-900 sm:text-3xl">Building strong foundations since 25+ years</h2>
-    <p class="mx-auto mt-4 max-w-xl text-[14px] leading-relaxed text-gray-500">
-      Located on the Kseri-Motla Road in Bolni, Dist. Rewari, our school has been a trusted name in education across Haryana. We prepare students for board exams and life beyond with a balanced environment of academics, discipline, and values.
-    </p>
-  </div>
-  <div class="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-100">
-      <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 transition-colors group-hover:bg-brand-600">
-        <svg class="h-6 w-6 text-brand-600 transition-colors group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+<!-- ========================== WHY OUR SCHOOL ============================ -->
+<section id="why" class="bg-gray-50 py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">WHY CHOOSE US</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">What Makes Us Different</h2>
+    <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=75" alt="Students studying" class="aspect-[16/10] w-full object-cover"/>
+        <div class="p-6">
+          <h3 class="font-serif text-[17px] font-bold text-dark">Strong Academic Foundation</h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-gray-400">HBSE board curriculum with dedicated attention to conceptual learning, regular assessments, and board exam preparation from Class IX onwards.</p>
+        </div>
       </div>
-      <h3 class="text-[15px] font-bold text-brand-900">Strong Academics</h3>
-      <p class="mt-1.5 text-[13px] leading-snug text-gray-400">HBSE board curriculum with focus on conceptual learning and regular assessments.</p>
-    </div>
-    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-100">
-      <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-50 transition-colors group-hover:bg-accent">
-        <svg class="h-6 w-6 text-accent-dark transition-colors group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="8" r="5"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=75" alt="Classroom" class="aspect-[16/10] w-full object-cover"/>
+        <div class="p-6">
+          <h3 class="font-serif text-[17px] font-bold text-dark">Values & Character Building</h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-gray-400">Rooted in the teachings of Swami Dayanand Saraswati — discipline, honesty, and respect are woven into every aspect of school life.</p>
+        </div>
       </div>
-      <h3 class="text-[15px] font-bold text-brand-900">Values & Discipline</h3>
-      <p class="mt-1.5 text-[13px] leading-snug text-gray-400">Rooted in the teachings of Swami Dayanand Saraswati with emphasis on moral growth.</p>
-    </div>
-    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-100">
-      <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 transition-colors group-hover:bg-success">
-        <svg class="h-6 w-6 text-success transition-colors group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=75" alt="Sports" class="aspect-[16/10] w-full object-cover"/>
+        <div class="p-6">
+          <h3 class="font-serif text-[17px] font-bold text-dark">Beyond Classrooms</h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-gray-400">Annual sports day, cultural events, kho-kho, cricket, and co-curricular activities that shape well-rounded individuals.</p>
+        </div>
       </div>
-      <h3 class="text-[15px] font-bold text-brand-900">Experienced Faculty</h3>
-      <p class="mt-1.5 text-[13px] leading-snug text-gray-400">Dedicated and qualified teachers committed to every student's progress.</p>
-    </div>
-    <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-100">
-      <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 transition-colors group-hover:bg-purple-600">
-        <svg class="h-6 w-6 text-purple-600 transition-colors group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-      </div>
-      <h3 class="text-[15px] font-bold text-brand-900">Sports & Activities</h3>
-      <p class="mt-1.5 text-[13px] leading-snug text-gray-400">Annual sports day, competitions, cultural events and holistic development.</p>
     </div>
   </div>
 </section>
 
 <!-- ========================== ACADEMICS ================================ -->
-<section id="academics" class="bg-gradient-to-b from-brand-50/50 to-white py-20">
-  <div class="mx-auto max-w-7xl px-5 lg:px-10">
-    <p class="mb-2 text-center text-[12px] font-bold tracking-widest text-brand-600">ACADEMICS</p>
-    <h2 class="text-center font-display text-2xl font-bold text-brand-900 sm:text-3xl">Classes from Primary to Senior Secondary</h2>
-    <div class="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
-      <div class="relative overflow-hidden rounded-2xl border-2 border-brand-100 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-        <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-2xl font-extrabold text-brand-700">I</div>
-        <h3 class="text-[14px] font-bold text-brand-900">Primary</h3>
-        <p class="text-[12px] font-semibold text-gray-400">Class I – V</p>
+<section id="academics" class="py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">ACADEMICS</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Classes From Primary to Senior Secondary</h2>
+    <p class="mx-auto mt-4 max-w-lg text-center text-[15px] text-gray-400">One school, every stage — from a child's first classroom to their board exams.</p>
+    <div class="mx-auto mt-14 grid max-w-4xl grid-cols-2 gap-5 sm:grid-cols-4">
+      <div class="group cursor-default rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-teal/30 hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-light font-serif text-2xl font-bold text-teal transition-colors group-hover:bg-teal group-hover:text-white">I</div>
+        <h3 class="text-[15px] font-bold text-dark">Primary</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class I – V</p>
       </div>
-      <div class="relative overflow-hidden rounded-2xl border-2 border-brand-100 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-        <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-2xl font-extrabold text-blue-700">II</div>
-        <h3 class="text-[14px] font-bold text-brand-900">Middle</h3>
-        <p class="text-[12px] font-semibold text-gray-400">Class VI – VIII</p>
+      <div class="group cursor-default rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-teal/30 hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-light font-serif text-2xl font-bold text-teal transition-colors group-hover:bg-teal group-hover:text-white">II</div>
+        <h3 class="text-[15px] font-bold text-dark">Middle</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class VI – VIII</p>
       </div>
-      <div class="relative overflow-hidden rounded-2xl border-2 border-brand-100 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-        <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 text-2xl font-extrabold text-purple-700">III</div>
-        <h3 class="text-[14px] font-bold text-brand-900">Secondary</h3>
-        <p class="text-[12px] font-semibold text-gray-400">Class IX – X</p>
+      <div class="group cursor-default rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-teal/30 hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-light font-serif text-2xl font-bold text-teal transition-colors group-hover:bg-teal group-hover:text-white">III</div>
+        <h3 class="text-[15px] font-bold text-dark">Secondary</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class IX – X</p>
       </div>
-      <div class="relative overflow-hidden rounded-2xl border-2 border-accent/30 bg-gradient-to-b from-amber-50 to-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg">
-        <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-2xl font-extrabold text-accent-dark">IV</div>
-        <h3 class="text-[14px] font-bold text-brand-900">Sr. Secondary</h3>
-        <p class="text-[12px] font-semibold text-gray-400">Class XI – XII</p>
-        <div class="absolute -right-3 -top-3 rounded-bl-xl bg-accent px-3 py-1 text-[9px] font-bold text-white">HBSE</div>
+      <div class="group cursor-default rounded-2xl border-2 border-gold/30 bg-gold-light p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold/20 font-serif text-2xl font-bold text-gold transition-colors group-hover:bg-gold group-hover:text-white">IV</div>
+        <h3 class="text-[15px] font-bold text-dark">Sr. Secondary</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class XI – XII</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========================== ADMISSIONS ================================ -->
-<section id="admissions" class="relative overflow-hidden py-20">
-  <div class="absolute inset-0 bg-gradient-to-r from-brand-700 to-brand-900"></div>
-  <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:24px 24px"></div>
-  <div class="absolute -right-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-accent/20 blur-[80px]"></div>
-  <div class="relative z-10 mx-auto max-w-7xl px-5 lg:px-10">
-    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-      <div>
-        <p class="mb-2 text-[12px] font-bold tracking-widest text-accent-light">ADMISSIONS 2026-27</p>
-        <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">Begin your child's journey with us</h2>
-        <p class="mt-4 max-w-md text-[14px] leading-relaxed text-white/60">Forms are available at the school office for all classes. Limited seats per section — visit the campus or call us to learn about the admission process, fee structure, and requirements.</p>
-        <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a href="tel:+919416816421" class="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-[14px] font-bold text-brand-800 shadow-xl transition-all hover:scale-[1.03]">
-            <svg class="h-4 w-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
-            Call: 094168 16421
-          </a>
-          <a href="#contact" class="inline-flex items-center gap-2 rounded-full border-2 border-white/20 px-7 py-3.5 text-[14px] font-bold text-white transition-all hover:bg-white/10">Visit Campus</a>
-        </div>
-      </div>
-      <div class="grid grid-cols-2 gap-3">
-        <div class="rounded-2xl bg-white/10 p-5 backdrop-blur-md"><p class="text-3xl font-extrabold text-white">500<span class="text-accent">+</span></p><p class="mt-1 text-[12px] font-semibold text-white/50">Students Enrolled</p></div>
-        <div class="rounded-2xl bg-white/10 p-5 backdrop-blur-md"><p class="text-3xl font-extrabold text-white">50<span class="text-accent">+</span></p><p class="mt-1 text-[12px] font-semibold text-white/50">Expert Teachers</p></div>
-        <div class="rounded-2xl bg-white/10 p-5 backdrop-blur-md"><p class="text-3xl font-extrabold text-white">95<span class="text-accent">%</span></p><p class="mt-1 text-[12px] font-semibold text-white/50">Pass Rate</p></div>
-        <div class="rounded-2xl bg-white/10 p-5 backdrop-blur-md"><p class="text-3xl font-extrabold text-accent">A+</p><p class="mt-1 text-[12px] font-semibold text-white/50">Board Results</p></div>
-      </div>
+<!-- ========================== ADMISSIONS CTA ============================ -->
+<section id="admissions" class="relative overflow-hidden bg-dark py-24">
+  <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=60" alt="" class="absolute inset-0 h-full w-full object-cover opacity-15"/>
+  <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/70"></div>
+  <div class="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
+    <p class="mb-4 text-[12px] font-semibold tracking-[0.2em] text-gold">ADMISSIONS 2026-27</p>
+    <h2 class="font-serif text-[1.75rem] font-bold leading-snug text-white sm:text-[2.1rem]">The Beginning of Your Child's Best Journey</h2>
+    <p class="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-white/50">
+      Forms available at the school office for all classes. Limited seats per section. Visit the campus or call us today.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a href="tel:+919416816421" class="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-[14px] font-semibold text-dark transition-all hover:scale-[1.03]">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
+        Call: 094168 16421
+      </a>
+      <a href="#contact" class="rounded-full border border-white/20 px-8 py-3.5 text-[14px] font-medium text-white transition-all hover:bg-white/10">Visit Campus</a>
     </div>
   </div>
 </section>
 
 <!-- ============================ NOTICE BOARD ============================ -->
-<section id="notices" class="mx-auto max-w-7xl px-5 py-20 lg:px-10">
-  <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+<section id="notices" class="mx-auto max-w-6xl px-6 py-24 lg:px-10">
+  <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
     <div>
-      <p class="mb-2 text-[12px] font-bold tracking-widest text-brand-600">NOTICE BOARD</p>
-      <h2 class="font-display text-2xl font-bold text-brand-900 sm:text-3xl">Latest Announcements</h2>
-      <p class="mt-2 max-w-md text-[14px] text-gray-400">Admission dates, events and results, updated by the school office.</p>
+      <p class="mb-3 text-[12px] font-semibold tracking-[0.2em] text-teal">NOTICE BOARD</p>
+      <h2 class="font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Latest Announcements</h2>
     </div>
-    <a href="#" class="inline-flex items-center gap-1.5 text-[13px] font-bold text-brand-600 hover:text-brand-800">
+    <a href="#" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-teal hover:underline">
       View all
       <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
     </a>
   </div>
-  <div id="notice-grid" class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2"></div>
+  <div id="notice-grid" class="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2"></div>
 </section>
 
-<!-- ========================= QUICK CONTACT BAR ========================== -->
-<section id="contact" class="bg-brand-900">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-white/[0.08] px-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
-    <div class="flex items-center gap-4 py-7 sm:px-6">
-      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600/30"><svg class="h-5 w-5 text-brand-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
-      <div><p class="text-[10px] font-bold tracking-wide text-white/30">ADDRESS</p><p class="mt-0.5 text-[13px] font-medium leading-snug text-white">Kseri-Motla Road, Bolni, Dist. Rewari, Haryana 123401</p></div>
+<!-- ========================= CONTACT BAR ================================ -->
+<section id="contact" class="border-t border-gray-100 bg-gray-50">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 divide-y divide-gray-200 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
+    <div class="flex items-center gap-4 py-8 sm:px-8">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-light"><svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+      <div><p class="text-[11px] font-semibold tracking-wider text-gray-400">ADDRESS</p><p class="mt-0.5 text-[13.5px] font-medium leading-snug text-dark">Kseri-Motla Road, Bolni, Dist. Rewari, Haryana 123401</p></div>
     </div>
-    <a href="tel:+919416816421" class="flex items-center gap-4 py-7 transition-opacity hover:opacity-80 sm:px-6">
-      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600/30"><svg class="h-5 w-5 text-brand-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg></div>
-      <div><p class="text-[10px] font-bold tracking-wide text-white/30">PHONE</p><p class="mt-0.5 text-[13px] font-medium text-white">094168 16421</p></div>
+    <a href="tel:+919416816421" class="flex items-center gap-4 py-8 transition-opacity hover:opacity-70 sm:px-8">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-light"><svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg></div>
+      <div><p class="text-[11px] font-semibold tracking-wider text-gray-400">PHONE</p><p class="mt-0.5 text-[13.5px] font-medium text-dark">094168 16421</p></div>
     </a>
-    <div class="flex items-center gap-4 py-7 sm:px-6">
-      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-600/30"><svg class="h-5 w-5 text-brand-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-      <div><p class="text-[10px] font-bold tracking-wide text-white/30">OFFICE HOURS</p><p class="mt-0.5 text-[13px] font-medium text-white">Mon – Sat, 8:00 AM – 2:00 PM</p></div>
+    <div class="flex items-center gap-4 py-8 sm:px-8">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-light"><svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+      <div><p class="text-[11px] font-semibold tracking-wider text-gray-400">OFFICE HOURS</p><p class="mt-0.5 text-[13.5px] font-medium text-dark">Mon – Sat, 8:00 AM – 2:00 PM</p></div>
     </div>
   </div>
 </section>
 
 <!-- =============================== FOOTER =============================== -->
-<footer class="bg-brand-900 text-white">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 border-t border-white/[0.06] px-5 py-16 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.6fr_0.6fr_1fr] lg:px-10">
+<footer class="bg-dark text-white">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.6fr_0.6fr_1fr] lg:px-10">
     <div>
-      <div class="mb-4 flex items-center gap-3">
-        <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10"><svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4"/><path d="M22 9v6"/></svg></span>
-        <span class="leading-tight"><span class="block text-[15px] font-bold">Swami Dayanand Saraswati</span><span class="block text-[11px] font-medium text-white/40">Sr. Sec. School, Bolni</span></span>
-      </div>
-      <p class="max-w-xs text-[13px] leading-relaxed text-white/40">Guiding students with discipline, values and quality academics for over 25 years in Bolni, Rewari, Haryana.</p>
+      <p class="mb-2 font-serif text-[18px] font-bold">Swami Dayanand Saraswati</p>
+      <p class="text-[12px] font-medium tracking-wider text-white/40">SR. SEC. SCHOOL, BOLNI</p>
+      <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-white/40">Guiding students with discipline, values and quality academics for over 25 years in Bolni, Rewari, Haryana.</p>
     </div>
     <div>
-      <p class="mb-3 text-[10px] font-bold tracking-widest text-white/20">EXPLORE</p>
-      <ul class="space-y-2.5 text-[13px] text-white/55"><li><a href="#top" class="hover:text-white">Home</a></li><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#academics" class="hover:text-white">Academics</a></li><li><a href="#admissions" class="hover:text-white">Admissions</a></li><li><a href="#notices" class="hover:text-white">Notices</a></li></ul>
+      <p class="mb-4 text-[11px] font-semibold tracking-widest text-white/25">QUICK LINKS</p>
+      <ul class="space-y-2.5 text-[13px] text-white/50"><li><a href="#top" class="hover:text-white">Home</a></li><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#why" class="hover:text-white">Why Us</a></li><li><a href="#academics" class="hover:text-white">Academics</a></li><li><a href="#notices" class="hover:text-white">Notices</a></li></ul>
     </div>
     <div>
-      <p class="mb-3 text-[10px] font-bold tracking-widest text-white/20">CONTACT</p>
-      <ul class="space-y-2.5 text-[13px] text-white/55"><li><a href="tel:+919416816421" class="hover:text-white">094168 16421</a></li><li>Kseri-Motla Road, Bolni</li><li>Dist. Rewari, Haryana 123401</li></ul>
+      <p class="mb-4 text-[11px] font-semibold tracking-widest text-white/25">CONTACT</p>
+      <ul class="space-y-2.5 text-[13px] text-white/50"><li><a href="tel:+919416816421" class="hover:text-white">094168 16421</a></li><li>Kseri-Motla Road, Bolni</li><li>Dist. Rewari, Haryana 123401</li></ul>
     </div>
-    <div class="flex aspect-video items-center justify-center rounded-2xl border border-white/[0.06] bg-white/[0.03] sm:aspect-auto sm:min-h-[10rem]">
+    <div class="flex aspect-video items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.03] sm:aspect-auto sm:min-h-[10rem]">
       <div class="flex flex-col items-center gap-2 px-4 text-center text-white/20"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg><p class="text-[11px] leading-snug">Google Maps<br/>Kseri-Motla Road, Bolni</p></div>
     </div>
   </div>
-  <div class="border-t border-white/[0.06] px-5 py-5 lg:px-10"><p class="text-[11px] text-white/25">© <span id="year"></span> Swami Dayanand Saraswati Sr. Sec. School. All rights reserved.</p></div>
+  <div class="border-t border-white/[0.06] px-6 py-5 lg:px-10"><p class="text-[11px] text-white/25">© <span id="year"></span> Swami Dayanand Saraswati Sr. Sec. School. All rights reserved.</p></div>
 </footer>
 <script src="js/main.js"></script>
 </body>
