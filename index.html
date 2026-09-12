@@ -1,204 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Swami Dayanand Saraswati Sr. Sec. School — Bolni, Rewari</title>
-<meta name="description" content="Swami Dayanand Saraswati Sr. Sec. School, Kseri-Motla Road, Bolni, Dist. Rewari, Haryana. Senior Secondary education rooted in discipline and values." />
-
-<!-- Fonts: Inter for everything — bold/black weights carry the headline -->
+<meta name="description" content="Swami Dayanand Saraswati Sr. Sec. School, Kseri-Motla Road, Bolni, Dist. Rewari, Haryana 123401. Senior Secondary education rooted in discipline and values." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-  rel="stylesheet"
-/>
-
-<!-- Tailwind CSS — Play CDN, no build step needed -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          navy: { deep: '#0A1628', DEFAULT: '#0F1F3D', hover: '#16294F' },
-          gold: '#B08D2B',
-        },
-        fontFamily: {
-          sans: ['Inter', 'sans-serif'],
-        },
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { deep: '#0A1628', DEFAULT: '#0F1F3D', light: '#162A50', hover: '#16294F' },
+        gold: { DEFAULT: '#D4A843', dark: '#B08D2B', light: '#F0D78C' },
+        sky: '#3B82F6',
       },
+      fontFamily: { sans: ['Inter', 'sans-serif'] },
     },
-  };
+  },
+};
 </script>
-
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="bg-white font-sans text-navy antialiased">
 
-<!-- ============================== NAVBAR ============================== -->
-<header
-  id="navbar"
-  class="fixed inset-x-0 top-0 z-50 border-b border-navy/[0.08] bg-white/70 backdrop-blur-lg transition-shadow duration-300"
->
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+<!-- ============================= NAVBAR ============================== -->
+<header id="navbar" class="fixed inset-x-0 top-0 z-50 border-b border-navy/[0.06] bg-white/80 backdrop-blur-xl transition-shadow duration-300">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-10">
     <a href="#top" class="flex items-center gap-3">
-      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy">
+      <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy shadow-lg shadow-navy/25">
         <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 9l10-4 10 4-10 4-10-4z" />
-          <path d="M6 11v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4" />
-          <path d="M22 9v6" />
+          <path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4"/><path d="M22 9v6"/>
         </svg>
       </span>
       <span class="leading-tight text-navy">
-        <span class="block text-[13px] font-bold tracking-tight">Swami Dayanand Saraswati</span>
-        <span class="block text-[11px] font-medium text-navy/60">Sr. Sec. School, Bolni</span>
+        <span class="block text-[14px] font-bold tracking-tight">Swami Dayanand Saraswati</span>
+        <span class="block text-[11px] font-medium text-navy/50">SR. SEC. SCHOOL, BOLNI</span>
       </span>
     </a>
 
-    <ul id="nav-links" class="hidden items-center gap-9 text-sm font-medium text-navy/75 md:flex">
-      <li><a href="#notices" class="transition-opacity hover:opacity-60">Notices</a></li>
-      <li><a href="#contact" class="transition-opacity hover:opacity-60">Contact</a></li>
+    <ul class="hidden items-center gap-8 text-[13.5px] font-semibold text-navy/65 md:flex">
+      <li><a href="#about" class="transition-colors hover:text-navy">About</a></li>
+      <li><a href="#notices" class="transition-colors hover:text-navy">Notices</a></li>
+      <li><a href="#contact" class="transition-colors hover:text-navy">Contact</a></li>
     </ul>
 
-    <a
-      href="#contact"
-      id="nav-cta"
-      class="hidden items-center gap-1.5 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold md:inline-flex"
-    >
+    <a href="#contact" class="hidden items-center gap-1.5 rounded-xl bg-navy px-5 py-2.5 text-[13px] font-semibold text-white shadow-lg shadow-navy/25 transition-all hover:scale-[1.03] hover:bg-navy-hover md:inline-flex">
       Contact Us
-      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 6l6 6-6 6" />
-      </svg>
+      <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
 
-    <button
-      id="menu-btn"
-      aria-label="Open menu"
-      aria-expanded="false"
-      class="rounded-md p-1 text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold md:hidden"
-    >
-      <svg id="icon-menu" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="18" x2="21" y2="18" />
-      </svg>
-      <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <line x1="5" y1="5" x2="19" y2="19" />
-        <line x1="19" y1="5" x2="5" y2="19" />
-      </svg>
+    <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="rounded-lg p-2 text-navy hover:bg-navy/5 md:hidden">
+      <svg id="icon-menu" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      <svg id="icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
     </button>
   </nav>
-
-  <div id="mobile-panel" class="overflow-hidden border-t border-navy/[0.1] bg-white md:hidden">
-    <ul class="flex flex-col gap-1 px-6 py-4">
-      <li>
-        <a href="#notices" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-navy hover:bg-navy/5">
-          Notices
-        </a>
-      </li>
-      <li>
-        <a href="#contact" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-navy hover:bg-navy/5">
-          Contact
-        </a>
-      </li>
-      <li class="pt-2">
-        <a href="#contact" class="mobile-link block rounded-full bg-navy px-4 py-2.5 text-center text-sm font-medium text-white">
-          Contact Us
-        </a>
-      </li>
+  <div id="mobile-panel" class="overflow-hidden border-t border-navy/[0.08] bg-white md:hidden">
+    <ul class="flex flex-col gap-1 px-5 py-4">
+      <li><a href="#about" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-navy hover:bg-navy/5">About</a></li>
+      <li><a href="#notices" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-navy hover:bg-navy/5">Notices</a></li>
+      <li><a href="#contact" class="mobile-link block rounded-lg px-3 py-2.5 text-[15px] font-medium text-navy hover:bg-navy/5">Contact</a></li>
+      <li class="pt-2"><a href="#contact" class="mobile-link block rounded-xl bg-navy px-4 py-2.5 text-center text-sm font-semibold text-white">Contact Us</a></li>
     </ul>
   </div>
 </header>
 
-<!-- =============================== HERO ================================ -->
-<section id="top" class="relative flex min-h-[100vh] items-end overflow-hidden bg-navy-deep pt-28">
-  <!-- Campus background photo — replace images/campus-hero.jpg with a real photo -->
-  <img
-    src="images/campus-hero.jpg"
-    alt="Campus grounds of Swami Dayanand Saraswati Sr. Sec. School"
-    class="absolute inset-0 h-full w-full object-cover"
-  />
-  <!-- Two light gradients (bottom + left) keep the photo vivid while the
-       headline stays readable — no heavy dark wash over the whole image. -->
-  <div class="absolute inset-0 bg-gradient-to-t from-navy-deep/[0.92] via-navy-deep/30 to-transparent"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-navy-deep/60 via-navy-deep/10 to-transparent"></div>
+<!-- ================================ HERO ================================ -->
+<section id="top" class="relative min-h-screen overflow-hidden bg-navy-deep">
+  <!-- Background photo — replace images/campus-hero.jpg with a real school photo -->
+  <img src="images/campus-hero.jpg" alt="Campus of Swami Dayanand Saraswati Sr. Sec. School" class="absolute inset-0 h-full w-full object-cover opacity-40" />
 
-  <div class="hero-fade relative z-10 mx-auto w-full max-w-7xl px-6 pb-28 lg:px-10">
-    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-navy-deep/50 px-4 py-2 backdrop-blur-sm">
-      <span class="relative flex h-2 w-2">
+  <!-- Decorative gradient mesh that looks rich even without a photo -->
+  <div class="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy to-navy-light"></div>
+  <div class="absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-sky/[0.08] blur-[120px]"></div>
+  <div class="absolute -bottom-20 -right-20 h-[500px] w-[500px] rounded-full bg-gold/[0.1] blur-[100px]"></div>
+  <div class="absolute left-1/2 top-1/3 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-white/[0.03] blur-[80px]"></div>
+
+  <!-- Grid dot pattern overlay -->
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+  <div class="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-5 pb-32 pt-28 lg:px-10">
+    <!-- Badge -->
+    <div class="hero-fade mb-7 inline-flex w-fit items-center gap-2.5 rounded-full border border-white/[0.12] bg-white/[0.08] px-4 py-2 backdrop-blur-md">
+      <span class="relative flex h-2.5 w-2.5">
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+        <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
       </span>
-      <span class="text-[12px] font-semibold tracking-wide text-white">SENIOR SECONDARY | REWARI, HARYANA</span>
+      <span class="text-[12px] font-semibold tracking-widest text-white/90">SENIOR SECONDARY · REWARI, HARYANA</span>
     </div>
 
-    <h1 class="max-w-4xl text-[2.75rem] font-black leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-[5rem]">
-      Rooted in Values,<br />
-      Built for Achievement.
+    <!-- Headline -->
+    <h1 class="hero-fade max-w-4xl text-[2.75rem] font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[5.2rem]">
+      Where Curiosity<br />Becomes <span class="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">Achievement.</span>
     </h1>
 
-    <p class="mt-6 max-w-lg text-[17px] leading-relaxed text-white/[0.8]">
-      Senior Secondary schooling in the heart of Rewari, Haryana — building disciplined minds
-      and confident futures.
+    <!-- Subtitle -->
+    <p class="hero-fade mt-6 max-w-xl text-[17px] leading-relaxed text-white/65">
+      Swami Dayanand Saraswati Sr. Sec. School — Senior Secondary education in the heart of Haryana,
+      shaping disciplined minds and confident futures since day one.
     </p>
 
-    <div class="mt-9 flex flex-wrap items-center gap-4">
-      <a
-        href="#contact"
-        class="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy-deep transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-      >
+    <!-- CTAs -->
+    <div class="hero-fade mt-10 flex flex-wrap items-center gap-4">
+      <a href="#contact" class="group inline-flex items-center gap-2.5 rounded-xl bg-white px-7 py-4 text-[14px] font-bold text-navy-deep shadow-xl shadow-white/10 transition-all hover:scale-[1.03] hover:shadow-2xl hover:shadow-white/20">
         Explore Admissions
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 6l6 6-6 6" />
-        </svg>
+        <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a
-        href="#notices"
-        class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-navy-deep/50 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-navy-deep/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-      >
-        See Notices
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 6l6 6-6 6" />
-        </svg>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border border-white/[0.15] bg-white/[0.06] px-7 py-4 text-[14px] font-semibold text-white backdrop-blur-md transition-all hover:bg-white/[0.12]">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
+        094168 16421
       </a>
+    </div>
+
+    <!-- Floating stats bar -->
+    <div class="hero-fade mt-16 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+      <div class="rounded-2xl border border-white/[0.08] bg-white/[0.05] px-5 py-5 backdrop-blur-md">
+        <p class="text-2xl font-black text-white sm:text-3xl">I–XII</p>
+        <p class="mt-1 text-[12px] font-medium text-white/50">All Classes</p>
+      </div>
+      <div class="rounded-2xl border border-white/[0.08] bg-white/[0.05] px-5 py-5 backdrop-blur-md">
+        <p class="text-2xl font-black text-white sm:text-3xl">25+</p>
+        <p class="mt-1 text-[12px] font-medium text-white/50">Years of Trust</p>
+      </div>
+      <div class="rounded-2xl border border-white/[0.08] bg-white/[0.05] px-5 py-5 backdrop-blur-md">
+        <p class="text-2xl font-black text-white sm:text-3xl">HBSE</p>
+        <p class="mt-1 text-[12px] font-medium text-white/50">Board Affiliated</p>
+      </div>
+      <div class="rounded-2xl border border-white/[0.08] bg-white/[0.05] px-5 py-5 backdrop-blur-md">
+        <p class="text-2xl font-black text-gold sm:text-3xl">A+</p>
+        <p class="mt-1 text-[12px] font-medium text-white/50">Results Track</p>
+      </div>
     </div>
   </div>
 
-  <!-- Overlapping bento panel: stages of schooling -->
-  <div class="absolute inset-x-0 bottom-0 z-20 translate-y-1/2 px-6 lg:px-10">
-    <div class="mx-auto flex max-w-4xl flex-col items-start gap-8 rounded-3xl border border-navy/[0.1] bg-white px-8 py-8 shadow-[0_20px_60px_-25px_rgba(10,22,40,0.35)] sm:flex-row sm:items-end sm:justify-between sm:px-10">
-      <p class="max-w-[13rem] text-[14px] leading-snug text-navy/60">
-        One school, every stage — from a child's first classroom to their board exams.
+  <!-- Bottom curve -->
+  <div class="absolute bottom-0 left-0 right-0 z-20">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"><path d="M0 60V30C240 0 480 0 720 15C960 30 1200 30 1440 15V60H0Z" fill="white"/></svg>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ================================ -->
+<section id="about" class="mx-auto max-w-7xl px-5 pb-24 pt-20 lg:px-10">
+  <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
+    <div>
+      <p class="mb-3 text-[12px] font-bold tracking-widest text-gold-dark">ABOUT OUR SCHOOL</p>
+      <h2 class="text-3xl font-extrabold tracking-tight text-navy sm:text-[2.5rem] sm:leading-tight">
+        Building strong foundations for a brighter tomorrow.
+      </h2>
+      <p class="mt-5 text-[15.5px] leading-relaxed text-navy/60">
+        Located on the Kseri-Motla Road in Bolni, Dist. Rewari, Swami Dayanand Saraswati Sr. Sec. School has been a trusted name in education across Haryana. Our school provides a balanced environment of academics, discipline, and values — preparing students from Class I through XII for board exams and life beyond.
       </p>
-      <div class="grid w-full grid-cols-4 items-end gap-4 sm:w-auto sm:gap-6">
+      <p class="mt-4 text-[15.5px] leading-relaxed text-navy/60">
+        With experienced faculty, well-maintained classrooms, and a focus on every child's growth, we make sure no student is left behind.
+      </p>
+      <a href="#contact" class="mt-8 inline-flex items-center gap-2 rounded-xl bg-navy/[0.06] px-6 py-3 text-[13.5px] font-semibold text-navy transition-colors hover:bg-navy/[0.1]">
+        Get in Touch
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="grid grid-cols-2 gap-3">
+      <div class="rounded-2xl border border-navy/[0.06] bg-gradient-to-br from-navy/[0.03] to-transparent p-5">
+        <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-sky/10">
+          <svg class="h-5 w-5 text-sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3 class="text-[14px] font-bold text-navy">Strong Academics</h3>
+        <p class="mt-1 text-[12.5px] leading-snug text-navy/50">HBSE board curriculum with focus on conceptual learning.</p>
+      </div>
+      <div class="rounded-2xl border border-navy/[0.06] bg-gradient-to-br from-navy/[0.03] to-transparent p-5">
+        <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gold/10">
+          <svg class="h-5 w-5 text-gold-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+        </div>
+        <h3 class="text-[14px] font-bold text-navy">Values & Discipline</h3>
+        <p class="mt-1 text-[12.5px] leading-snug text-navy/50">Rooted in the teachings of Swami Dayanand Saraswati.</p>
+      </div>
+      <div class="rounded-2xl border border-navy/[0.06] bg-gradient-to-br from-navy/[0.03] to-transparent p-5">
+        <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10">
+          <svg class="h-5 w-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="text-[14px] font-bold text-navy">Experienced Faculty</h3>
+        <p class="mt-1 text-[12.5px] leading-snug text-navy/50">Dedicated teachers for every class and subject.</p>
+      </div>
+      <div class="rounded-2xl border border-navy/[0.06] bg-gradient-to-br from-navy/[0.03] to-transparent p-5">
+        <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10">
+          <svg class="h-5 w-5 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 12h20"/></svg>
+        </div>
+        <h3 class="text-[14px] font-bold text-navy">Sports & Activities</h3>
+        <p class="mt-1 text-[12.5px] leading-snug text-navy/50">Annual sports day, cultural events and competitions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= CLASS STAGES STRIP ========================= -->
+<section class="bg-navy/[0.03] py-16">
+  <div class="mx-auto max-w-7xl px-5 lg:px-10">
+    <div class="flex flex-col items-center gap-10 sm:flex-row sm:justify-between">
+      <div class="max-w-sm text-center sm:text-left">
+        <h3 class="text-xl font-extrabold text-navy sm:text-2xl">One school, every stage.</h3>
+        <p class="mt-2 text-[14px] text-navy/55">From a child's first classroom to their board exams.</p>
+      </div>
+      <div class="grid grid-cols-4 items-end gap-5 sm:gap-8">
         <div class="flex flex-col items-center gap-3">
-          <div class="w-9 rounded-t-lg bg-navy sm:w-11" style="height: 26px"></div>
-          <div class="text-center">
-            <p class="text-[10.5px] font-medium text-navy/40">I – V</p>
-            <p class="text-[12px] font-semibold leading-tight text-navy">Primary</p>
-          </div>
+          <div class="w-10 rounded-xl bg-navy/80 sm:w-14" style="height:32px"></div>
+          <div class="text-center"><p class="text-[10px] font-semibold text-navy/35">I – V</p><p class="text-[13px] font-bold text-navy">Primary</p></div>
         </div>
         <div class="flex flex-col items-center gap-3">
-          <div class="w-9 rounded-t-lg bg-navy sm:w-11" style="height: 42px"></div>
-          <div class="text-center">
-            <p class="text-[10.5px] font-medium text-navy/40">VI – VIII</p>
-            <p class="text-[12px] font-semibold leading-tight text-navy">Middle</p>
-          </div>
+          <div class="w-10 rounded-xl bg-navy/80 sm:w-14" style="height:48px"></div>
+          <div class="text-center"><p class="text-[10px] font-semibold text-navy/35">VI – VIII</p><p class="text-[13px] font-bold text-navy">Middle</p></div>
         </div>
         <div class="flex flex-col items-center gap-3">
-          <div class="w-9 rounded-t-lg bg-navy sm:w-11" style="height: 58px"></div>
-          <div class="text-center">
-            <p class="text-[10.5px] font-medium text-navy/40">IX – X</p>
-            <p class="text-[12px] font-semibold leading-tight text-navy">Secondary</p>
-          </div>
+          <div class="w-10 rounded-xl bg-navy sm:w-14" style="height:64px"></div>
+          <div class="text-center"><p class="text-[10px] font-semibold text-navy/35">IX – X</p><p class="text-[13px] font-bold text-navy">Secondary</p></div>
         </div>
         <div class="flex flex-col items-center gap-3">
-          <div class="w-9 rounded-t-lg bg-gold sm:w-11" style="height: 74px"></div>
-          <div class="text-center">
-            <p class="text-[10.5px] font-medium text-navy/40">XI – XII</p>
-            <p class="text-[12px] font-semibold leading-tight text-navy">Senior Secondary</p>
-          </div>
+          <div class="w-10 rounded-xl bg-gold-dark sm:w-14" style="height:80px"></div>
+          <div class="text-center"><p class="text-[10px] font-semibold text-navy/35">XI – XII</p><p class="text-[13px] font-bold text-navy">Sr. Sec.</p></div>
         </div>
       </div>
     </div>
@@ -206,126 +227,115 @@
 </section>
 
 <!-- ============================ NOTICE BOARD ============================ -->
-<section id="notices" class="mx-auto max-w-7xl px-6 pb-28 pt-40 lg:px-10 lg:pt-36">
+<section id="notices" class="mx-auto max-w-7xl px-5 py-24 lg:px-10">
   <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
     <div>
+      <p class="mb-2 text-[12px] font-bold tracking-widest text-gold-dark">NOTICE BOARD</p>
       <h2 class="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Latest from the school</h2>
-      <p class="mt-3 max-w-md text-[15px] text-navy/60">
-        Admission dates, events and results, updated by the school office.
-      </p>
+      <p class="mt-3 max-w-md text-[15px] text-navy/55">Admission dates, events and results, updated by the school office.</p>
     </div>
-    <a href="#" class="inline-flex items-center gap-1 text-sm font-medium text-navy hover:opacity-70">
+    <a href="#" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-navy hover:text-gold-dark">
       View all notices
-      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 6l6 6-6 6" />
-      </svg>
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
     </a>
   </div>
-
-  <!-- Populated by js/main.js from the ANNOUNCEMENTS array — swap that array
-       for a fetch() call to your own backend/database whenever it's ready. -->
   <div id="notice-grid" class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2"></div>
 </section>
 
-<!-- ========================== QUICK CONTACT BAR ========================= -->
+<!-- ========================= QUICK CONTACT BAR ========================== -->
 <section id="contact" class="bg-navy">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-white/[0.1] px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
-    <div class="flex items-center gap-4 py-7 sm:px-6">
-      <svg class="h-5 w-5 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" />
-        <circle cx="12" cy="9" r="2.4" />
-      </svg>
+  <div class="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-white/[0.08] px-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
+    <div class="flex items-center gap-4 py-8 sm:px-6">
+      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/20">
+        <svg class="h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+      </div>
       <div>
-        <p class="text-[11px] font-medium text-white/[0.45]">Address</p>
-        <p class="text-[14.5px] font-medium text-white">
-          Kseri-Motla Road, Bolni, Dist. Rewari, Haryana 123401
-        </p>
+        <p class="text-[11px] font-semibold tracking-wide text-white/40">ADDRESS</p>
+        <p class="mt-0.5 text-[14px] font-medium leading-snug text-white">Kseri-Motla Road, Bolni, Dist. Rewari, Haryana 123401</p>
       </div>
     </div>
-
-    <a
-      href="tel:+919416816421"
-      class="flex items-center gap-4 py-7 transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:px-6"
-    >
-      <svg class="h-5 w-5 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z" />
-      </svg>
+    <a href="tel:+919416816421" class="flex items-center gap-4 py-8 transition-opacity hover:opacity-80 sm:px-6">
+      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/20">
+        <svg class="h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
+      </div>
       <div>
-        <p class="text-[11px] font-medium text-white/[0.45]">Phone</p>
-        <p class="text-[14.5px] font-medium text-white">094168 16421</p>
+        <p class="text-[11px] font-semibold tracking-wide text-white/40">PHONE</p>
+        <p class="mt-0.5 text-[14px] font-medium text-white">094168 16421</p>
       </div>
     </a>
-
-    <div class="flex items-center gap-4 py-7 sm:px-6">
-      <svg class="h-5 w-5 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v5l3.5 2" />
-      </svg>
+    <div class="flex items-center gap-4 py-8 sm:px-6">
+      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/20">
+        <svg class="h-5 w-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      </div>
       <div>
-        <p class="text-[11px] font-medium text-white/[0.45]">Office hours</p>
-        <!-- TODO: confirm exact office hours with the school -->
-        <p class="text-[14.5px] font-medium text-white">Mon – Sat, 8:00 AM – 2:00 PM</p>
+        <p class="text-[11px] font-semibold tracking-wide text-white/40">OFFICE HOURS</p>
+        <p class="mt-0.5 text-[14px] font-medium text-white">Mon – Sat, 8:00 AM – 2:00 PM</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =============================== FOOTER ================================ -->
+<!-- ============================== CTA BAND ============================== -->
+<section class="bg-gradient-to-r from-navy-deep via-navy to-navy-light py-20">
+  <div class="mx-auto max-w-3xl px-5 text-center lg:px-10">
+    <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+      Admissions are open for 2026–27
+    </h2>
+    <p class="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-white/60">
+      Forms available at the school office for all classes. Contact us or visit the campus to learn more.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a href="tel:+919416816421" class="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-[14px] font-bold text-navy shadow-xl shadow-white/10 transition-all hover:scale-[1.03]">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
+        Call Now
+      </a>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border border-white/20 px-7 py-3.5 text-[14px] font-semibold text-white transition-all hover:bg-white/10">
+        View on Map
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== FOOTER =============================== -->
 <footer class="bg-navy-deep text-white">
-  <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-20 lg:grid-cols-[1.1fr_0.7fr_1fr] lg:px-10">
+  <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 py-20 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.6fr_0.6fr_1fr] lg:px-10">
     <div>
       <div class="mb-5 flex items-center gap-3">
-        <span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.2]">
-          <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 9l10-4 10 4-10 4-10-4z" />
-            <path d="M6 11v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4" />
-            <path d="M22 9v6" />
-          </svg>
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
+          <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-4 10 4-10 4-10-4z"/><path d="M6 11v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4"/><path d="M22 9v6"/></svg>
         </span>
-        <p class="text-[17px] font-bold">Swami Dayanand Saraswati</p>
+        <p class="text-[16px] font-bold">Swami Dayanand Saraswati</p>
       </div>
-      <p class="max-w-xs text-[14px] leading-relaxed text-white/[0.55]">
-        A Senior Secondary school in Bolni, Rewari, guiding students with discipline, values and
-        steady academics.
+      <p class="max-w-xs text-[13.5px] leading-relaxed text-white/50">
+        A Senior Secondary school in Bolni, Rewari, guiding students with discipline, values and steady academics since 25+ years.
       </p>
     </div>
-
     <div>
-      <p class="mb-4 text-[13px] font-medium text-white/40">Explore</p>
-      <ul class="space-y-3 text-[14px] text-white/[0.75]">
+      <p class="mb-4 text-[11px] font-bold tracking-widest text-white/30">EXPLORE</p>
+      <ul class="space-y-3 text-[14px] text-white/65">
         <li><a href="#top" class="hover:text-white">Home</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
         <li><a href="#notices" class="hover:text-white">Notices</a></li>
         <li><a href="#contact" class="hover:text-white">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Map placeholder — swap for a live Google Maps embed once the pin is finalised -->
-    <div class="flex aspect-video items-center justify-center rounded-2xl border border-white/[0.1] bg-white/5 lg:aspect-auto lg:min-h-[9rem]">
-      <div class="flex flex-col items-center gap-2 px-4 text-center text-white/40">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" />
-          <circle cx="12" cy="9" r="2.4" />
-        </svg>
-        <p class="text-[12px] leading-snug">
-          Google Maps embed placeholder<br />
-          Kseri-Motla Road, Bolni
-        </p>
-        <!--
-          Replace this whole block with, e.g.:
-          <iframe
-            src="https://www.google.com/maps/embed?..."
-            class="h-full w-full rounded-2xl"
-            loading="lazy"
-          ></iframe>
-        -->
+    <div>
+      <p class="mb-4 text-[11px] font-bold tracking-widest text-white/30">CONTACT</p>
+      <ul class="space-y-3 text-[14px] text-white/65">
+        <li><a href="tel:+919416816421" class="hover:text-white">094168 16421</a></li>
+        <li>Kseri-Motla Road, Bolni</li>
+        <li>Dist. Rewari, Haryana 123401</li>
+      </ul>
+    </div>
+    <div class="flex aspect-video items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.04] sm:aspect-auto sm:min-h-[10rem]">
+      <div class="flex flex-col items-center gap-2 px-4 text-center text-white/30">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <p class="text-[12px] leading-snug">Google Maps embed<br/>Kseri-Motla Road, Bolni</p>
       </div>
     </div>
   </div>
-
-  <div class="border-t border-white/[0.1] px-6 py-6 lg:px-10">
-    <p class="text-[12.5px] text-white/40">
-      © <span id="year"></span> Swami Dayanand Saraswati Sr. Sec. School. All rights reserved.
-    </p>
+  <div class="border-t border-white/[0.08] px-5 py-6 lg:px-10">
+    <p class="text-[12px] text-white/35">© <span id="year"></span> Swami Dayanand Saraswati Sr. Sec. School. All rights reserved.</p>
   </div>
 </footer>
 
