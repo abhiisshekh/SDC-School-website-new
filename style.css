@@ -1,21 +1,63 @@
+/* ============ HERO ENTRANCE ============ */
 .hero-el{opacity:0;transform:translateY(24px);animation:fadeUp .8s cubic-bezier(.22,1,.36,1) forwards}
 .hero-el:nth-child(1){animation-delay:.2s}
 .hero-el:nth-child(2){animation-delay:.4s}
 .hero-el:nth-child(3){animation-delay:.6s}
 .hero-el:nth-child(4){animation-delay:.8s}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.hero-el{animation:none!important;opacity:1!important;transform:none!important}}
 
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* ============ SCROLL ANIMATIONS ============ */
+[data-animate]{
+  opacity:0;
+  transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+[data-animate].visible{opacity:1;transform:translate(0,0) scale(1)!important}
+
+[data-animate="fade-up"]{transform:translateY(40px)}
+[data-animate="fade-down"]{transform:translateY(-40px)}
+[data-animate="fade-left"]{transform:translateX(-40px)}
+[data-animate="fade-right"]{transform:translateX(40px)}
+[data-animate="zoom-in"]{transform:scale(.92)}
+[data-animate="zoom-out"]{transform:scale(1.08)}
+
+/* Stagger children: each child delays slightly more */
+[data-stagger] > *{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1);
+}
+[data-stagger].visible > *{opacity:1;transform:translateY(0)}
+[data-stagger].visible > *:nth-child(1){transition-delay:.05s}
+[data-stagger].visible > *:nth-child(2){transition-delay:.12s}
+[data-stagger].visible > *:nth-child(3){transition-delay:.19s}
+[data-stagger].visible > *:nth-child(4){transition-delay:.26s}
+[data-stagger].visible > *:nth-child(5){transition-delay:.33s}
+[data-stagger].visible > *:nth-child(6){transition-delay:.40s}
+[data-stagger].visible > *:nth-child(7){transition-delay:.47s}
+[data-stagger].visible > *:nth-child(8){transition-delay:.54s}
+[data-stagger].visible > *:nth-child(9){transition-delay:.61s}
+
+/* Counter number animation */
+.counter{display:inline-block;min-width:2ch}
+
+/* ============ MOBILE MENU ============ */
 #mobile-panel{max-height:0;transition:max-height .3s ease}
 #mobile-panel.open{max-height:28rem}
 
+/* ============ FOCUS ============ */
 a:focus-visible,button:focus-visible{outline:2px solid #0d7377;outline-offset:2px}
 
-/* Navbar: transparent on top, glass when scrolled */
-#navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 1px 8px rgba(0,0,0,.05)}
+/* ============ NAVBAR ============ */
+#navbar.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 1px 12px rgba(0,0,0,.06)}
 #navbar.scrolled #brand-main{color:#1a2744}
 #navbar.scrolled #brand-sub{color:rgba(26,39,68,.5)}
-#navbar.scrolled #nav-links{color:rgba(26,39,68,.6)}
+#navbar.scrolled #nav-links{color:rgba(26,39,68,.55)}
 #navbar.scrolled #nav-links a:hover{color:#1a2744}
 #navbar.scrolled #nav-cta{background:#1a2744;color:#fff}
 #navbar.scrolled #menu-btn{color:#1a2744}
+
+/* ============ REDUCED MOTION ============ */
+@media(prefers-reduced-motion:reduce){
+  .hero-el,[data-animate],[data-stagger]>*{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}
+}
