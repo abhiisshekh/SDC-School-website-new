@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Swami Dayanand Saraswati Sr. Sec. School — Bolni, Rewari</title>
+<meta name="description" content="Swami Dayanand Saraswati Sr. Sec. School, Bolni, Dist. Rewari, Haryana 123401. Senior Secondary education with values and discipline."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{
+  colors:{
+    dark:'#1a2744',
+    teal:{DEFAULT:'#0d7377',light:'#e6f4f4'},
+    gold:{DEFAULT:'#c8a951',light:'#faf3e0'},
+  },
+  fontFamily:{
+    serif:['Libre Baskerville','Georgia','serif'],
+    sans:['Outfit','sans-serif'],
+  },
+}}};
+</script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-white font-sans text-gray-700 antialiased">
+
+<!-- ============================== NAVBAR ============================== -->
+<header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="logo.png" alt="SDS School Logo" class="h-12 w-12 shrink-0 rounded-xl object-contain"/>
+      <span class="leading-tight">
+        <span id="brand-main" class="block text-[17px] font-bold text-white sm:text-[19px]">Swami Dayanand Saraswati</span>
+        <span id="brand-sub" class="block text-[11px] font-medium tracking-wider text-white/60">SR. SEC. SCHOOL · BOLNI</span>
+      </span>
+    </a>
+    <ul id="nav-links" class="hidden items-center gap-8 text-[14px] font-medium text-white/80 lg:flex">
+      <li><a href="#top" class="transition hover:text-white">Home</a></li>
+      <li><a href="#about" class="transition hover:text-white">About</a></li>
+      <li><a href="#why" class="transition hover:text-white">Why Us</a></li>
+      <li><a href="#academics" class="transition hover:text-white">Academics</a></li>
+      <li><a href="#notices" class="transition hover:text-white">Notices</a></li>
+    </ul>
+    <a href="#contact" id="nav-cta" class="hidden rounded-full bg-white px-6 py-2.5 text-[13px] font-semibold text-dark shadow-lg transition-all hover:scale-[1.03] lg:inline-block">Contact Us</a>
+    <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="rounded-lg p-2 text-white lg:hidden">
+      <svg id="icon-menu" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </nav>
+  <div id="mobile-panel" class="overflow-hidden bg-white lg:hidden">
+    <ul class="flex flex-col gap-1 px-6 py-4">
+      <li><a href="#top" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Home</a></li>
+      <li><a href="#about" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">About</a></li>
+      <li><a href="#why" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Why Us</a></li>
+      <li><a href="#academics" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Academics</a></li>
+      <li><a href="#notices" class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-dark hover:bg-gray-50">Notices</a></li>
+      <li class="pt-2"><a href="#contact" class="mobile-link block rounded-full bg-dark px-4 py-2.5 text-center text-sm font-semibold text-white">Contact Us</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================================ HERO ================================ -->
+<section id="top" class="relative flex min-h-screen items-center justify-center overflow-hidden bg-dark">
+  <img src="hero.jpg" alt="Swami Dayanand Saraswati Sr. Sec. School campus, Bolni" class="absolute inset-0 h-full w-full object-cover opacity-35"/>
+  <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-dark/40"></div>
+  <div class="relative z-10 mx-auto max-w-4xl px-6 py-32 text-center">
+    <p class="hero-el mb-8 text-[13px] font-semibold tracking-[0.25em] text-gold">SWAMI DAYANAND SARASWATI SR. SEC. SCHOOL</p>
+    <h1 class="hero-el font-serif text-[2rem] font-normal italic leading-snug text-white sm:text-[2.5rem] lg:text-[3.2rem]">
+      "A school where learning inspires curiosity, builds character,
+      and prepares children for life beyond classrooms"
+    </h1>
+    <p class="hero-el mx-auto mt-6 max-w-lg text-[15px] leading-relaxed text-white/55">
+      Senior Secondary education in Bolni, Rewari — rooted in the values of Swami Dayanand Saraswati, shaping young minds for over 25 years.
+    </p>
+    <div class="hero-el mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="#admissions" class="rounded-full bg-gold px-8 py-3.5 text-[14px] font-semibold text-dark transition-all hover:scale-[1.03] hover:bg-gold-light">Explore Admissions</a>
+      <a href="#about" class="rounded-full border border-white/25 px-8 py-3.5 text-[14px] font-medium text-white transition-all hover:bg-white/10">Learn More</a>
+    </div>
+  </div>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
+    <div class="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/25 p-1.5"><div class="h-2 w-1 animate-bounce rounded-full bg-white/60"></div></div>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ================================ -->
+<section id="about" class="mx-auto max-w-6xl px-6 py-24 lg:px-10">
+  <div class="mx-auto max-w-3xl text-center">
+    <p class="mb-4 text-[12px] font-semibold tracking-[0.2em] text-teal">ABOUT OUR SCHOOL</p>
+    <h2 class="font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Stories That Inspire</h2>
+    <p class="mx-auto mt-5 max-w-2xl text-[15px] leading-[1.8] text-gray-500">
+      We are committed to providing quality education, nurturing young minds, and equipping our students to become responsible citizens and confident individuals. Located on Kseri-Motla Road, Bolni, our school blends academics with values — creating a space where every child matters.
+    </p>
+  </div>
+  <!-- Stats -->
+  <div class="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-dark">25<span class="text-teal">+</span></p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">Years of Trust</p>
+    </div>
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-dark">I–XII</p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">All Classes</p>
+    </div>
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-dark">HBSE</p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">Board Affiliated</p>
+    </div>
+    <div class="text-center">
+      <p class="font-serif text-[2.5rem] font-bold text-teal">95%</p>
+      <p class="mt-1 text-[13px] font-medium text-gray-400">Pass Rate</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== MESSAGES FROM LEADERSHIP ====================== -->
+<section class="border-t border-gray-100 bg-gray-50 py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">FROM THE DESK OF</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Messages From Our Leadership</h2>
+    <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <!-- Principal's Message -->
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <div class="h-1.5 bg-gradient-to-r from-teal to-teal/50"></div>
+        <div class="p-8">
+          <h3 class="font-serif text-xl font-bold text-dark">Principal's Message</h3>
+          <div class="mt-6 flex gap-5">
+            <img src="principal.jpg" alt="Principal" class="h-28 w-28 shrink-0 rounded-2xl object-cover shadow-md"/>
+            <div>
+              <p class="text-[14px] italic leading-relaxed text-gray-500">
+                "Education is not merely about textbooks and examinations — it is about building character, nurturing curiosity, and preparing our children to face the world with confidence. At Swami Dayanand Saraswati Sr. Sec. School, we believe every student carries the potential to achieve greatness. Our dedicated team of teachers works tirelessly to bring out the best in each child, blending academic excellence with moral values and discipline."
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 border-t border-gray-100 pt-4">
+            <p class="text-[15px] font-bold text-dark">Smt. Madhu Yadav</p>
+            <p class="text-[13px] font-medium text-teal">Principal</p>
+          </div>
+        </div>
+      </div>
+      <!-- Chairman's Message -->
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
+        <div class="h-1.5 bg-gradient-to-r from-gold to-gold/50"></div>
+        <div class="p-8">
+          <h3 class="font-serif text-xl font-bold text-dark">Chairman's Message</h3>
+          <div class="mt-6 flex gap-5">
+            <div class="flex h-28 w-28 shrink-0 items-center justify-center rounded-2xl bg-gray-100 shadow-md">
+              <svg class="h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/></svg>
+            </div>
+            <div>
+              <p class="text-[14px] italic leading-relaxed text-gray-500">
+                "Our vision has always been to create an institution that stands as a pillar of trust for every family in the region. We are committed to providing an environment where students not only excel in academics but also develop the social skills, integrity, and self-reliance needed to become responsible citizens. The future belongs to our children — and we are honoured to shape it."
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 border-t border-gray-100 pt-4">
+            <p class="text-[15px] font-bold text-dark">Shri Yagpal Yadav</p>
+            <p class="text-[13px] font-medium text-gold">Chairman</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== WHY OUR SCHOOL ============================ -->
+<section id="why" class="bg-gray-50 py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">WHY CHOOSE US</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">What Makes Us Different</h2>
+    <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <img src="entrance.jpg" alt="School campus entrance" class="aspect-[16/10] w-full object-cover"/>
+        <div class="p-6">
+          <h3 class="font-serif text-[17px] font-bold text-dark">Strong Academic Foundation</h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-gray-400">HBSE board curriculum with dedicated attention to conceptual learning, regular assessments, and board exam preparation from Class IX onwards.</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <img src="yoga1.jpg" alt="Students practicing yoga" class="aspect-[16/10] w-full object-cover"/>
+        <div class="p-6">
+          <h3 class="font-serif text-[17px] font-bold text-dark">Values & Character Building</h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-gray-400">Rooted in the teachings of Swami Dayanand Saraswati — discipline, yoga, and respect are woven into every aspect of school life.</p>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <img src="trophy.jpg" alt="Students with trophy" class="aspect-[16/10] w-full object-cover"/>
+        <div class="p-6">
+          <h3 class="font-serif text-[17px] font-bold text-dark">Beyond Classrooms</h3>
+          <p class="mt-2 text-[13.5px] leading-relaxed text-gray-400">Competitions, sports day, yoga sessions, and co-curricular activities that shape well-rounded and confident individuals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== ACADEMICS ================================ -->
+<section id="academics" class="py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">ACADEMICS</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Classes From Primary to Senior Secondary</h2>
+    <p class="mx-auto mt-4 max-w-lg text-center text-[15px] text-gray-400">One school, every stage — from a child's first classroom to their board exams.</p>
+    <div class="mx-auto mt-14 grid max-w-4xl grid-cols-2 gap-5 sm:grid-cols-4">
+      <div class="group cursor-default rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-teal/30 hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-light font-serif text-2xl font-bold text-teal transition-colors group-hover:bg-teal group-hover:text-white">I</div>
+        <h3 class="text-[15px] font-bold text-dark">Primary</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class I – V</p>
+      </div>
+      <div class="group cursor-default rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-teal/30 hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-light font-serif text-2xl font-bold text-teal transition-colors group-hover:bg-teal group-hover:text-white">II</div>
+        <h3 class="text-[15px] font-bold text-dark">Middle</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class VI – VIII</p>
+      </div>
+      <div class="group cursor-default rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-teal/30 hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-light font-serif text-2xl font-bold text-teal transition-colors group-hover:bg-teal group-hover:text-white">III</div>
+        <h3 class="text-[15px] font-bold text-dark">Secondary</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class IX – X</p>
+      </div>
+      <div class="group cursor-default rounded-2xl border-2 border-gold/30 bg-gold-light p-7 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-gold hover:shadow-lg">
+        <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold/20 font-serif text-2xl font-bold text-gold transition-colors group-hover:bg-gold group-hover:text-white">IV</div>
+        <h3 class="text-[15px] font-bold text-dark">Sr. Secondary</h3>
+        <p class="mt-1 text-[13px] text-gray-400">Class XI – XII</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== FACILITIES ================================ -->
+<section class="bg-gray-50 py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">OUR FACILITIES</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Best Education Infrastructure</h2>
+    <p class="mx-auto mt-4 max-w-lg text-center text-[15px] text-gray-400">Well-equipped campus with everything your child needs to learn and grow.</p>
+    <div class="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div class="aspect-[16/11] overflow-hidden"><img src="hero.jpg" alt="School building" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="p-5 text-center"><h3 class="text-[14px] font-bold tracking-wider text-dark">SCHOOL CAMPUS</h3></div>
+      </div>
+      <div class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div class="aspect-[16/11] overflow-hidden"><img src="building.jpg" alt="Classrooms building" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="p-5 text-center"><h3 class="text-[14px] font-bold tracking-wider text-dark">CLASSROOMS</h3></div>
+      </div>
+      <div class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div class="aspect-[16/11] overflow-hidden"><img src="bus.jpg" alt="School bus transport" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="p-5 text-center"><h3 class="text-[14px] font-bold tracking-wider text-dark">TRANSPORT FACILITY</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== GALLERY ================================= -->
+<section class="py-24">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10">
+    <p class="mb-4 text-center text-[12px] font-semibold tracking-[0.2em] text-teal">CAMPUS LIFE</p>
+    <h2 class="text-center font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Our Gallery</h2>
+    <p class="mx-auto mt-4 max-w-lg text-center text-[15px] text-gray-400">A glimpse of everyday life, events, and memories at our school.</p>
+    <div class="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div class="aspect-[16/11] overflow-hidden"><img src="yoga1.jpg" alt="Yoga Day celebration" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="p-5 text-center"><h3 class="text-[14px] font-bold tracking-wider text-dark">YOGA DAY</h3></div>
+      </div>
+      <div class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div class="aspect-[16/11] overflow-hidden"><img src="yoga2.jpg" alt="Students doing yoga" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="p-5 text-center"><h3 class="text-[14px] font-bold tracking-wider text-dark">FITNESS & WELLNESS</h3></div>
+      </div>
+      <div class="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+        <div class="aspect-[16/11] overflow-hidden"><img src="trophy.jpg" alt="Students with trophy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"/></div>
+        <div class="p-5 text-center"><h3 class="text-[14px] font-bold tracking-wider text-dark">ACHIEVEMENTS</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== ADMISSIONS CTA ============================ -->
+<section id="admissions" class="relative overflow-hidden bg-dark py-24">
+  <img src="entrance.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-15"/>
+  <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/70"></div>
+  <div class="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
+    <p class="mb-4 text-[12px] font-semibold tracking-[0.2em] text-gold">ADMISSIONS 2026-27</p>
+    <h2 class="font-serif text-[1.75rem] font-bold leading-snug text-white sm:text-[2.1rem]">The Beginning of Your Child's Best Journey</h2>
+    <p class="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-white/50">
+      Forms available at the school office for all classes. Limited seats per section. Visit the campus or call us today.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a href="tel:+919416816421" class="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-[14px] font-semibold text-dark transition-all hover:scale-[1.03]">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg>
+        Call: 094168 16421
+      </a>
+      <a href="#contact" class="rounded-full border border-white/20 px-8 py-3.5 text-[14px] font-medium text-white transition-all hover:bg-white/10">Visit Campus</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ NOTICE BOARD ============================ -->
+<section id="notices" class="mx-auto max-w-6xl px-6 py-24 lg:px-10">
+  <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <p class="mb-3 text-[12px] font-semibold tracking-[0.2em] text-teal">NOTICE BOARD</p>
+      <h2 class="font-serif text-[1.75rem] font-bold leading-snug text-dark sm:text-[2.1rem]">Latest Announcements</h2>
+    </div>
+    <a href="#" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-teal hover:underline">
+      View all
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <div id="notice-grid" class="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2"></div>
+</section>
+
+<!-- ========================= CONTACT BAR ================================ -->
+<section id="contact" class="border-t border-gray-100 bg-gray-50">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 divide-y divide-gray-200 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
+    <div class="flex items-center gap-4 py-8 sm:px-8">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-light"><svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+      <div><p class="text-[11px] font-semibold tracking-wider text-gray-400">ADDRESS</p><p class="mt-0.5 text-[13.5px] font-medium leading-snug text-dark">Kseri-Motla Road, Bolni, Dist. Rewari, Haryana 123401</p></div>
+    </div>
+    <a href="tel:+919416816421" class="flex items-center gap-4 py-8 transition-opacity hover:opacity-70 sm:px-8">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-light"><svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5c.6 1.6 1.4 3 2.4 4.2.3.4.3.9-.1 1.3l-1.7 1.7a12.7 12.7 0 0 0 6.2 6.2l1.7-1.7c.4-.4.9-.4 1.3-.1 1.2 1 2.6 1.8 4.2 2.4.6.2 1 .8.9 1.4l-.5 2.6c-.1.6-.7 1-1.3.9C11.9 21.4 3.6 13.1 2.7 4.4c-.1-.6.3-1.2.9-1.3l2.6-.5c.6-.1 1.2.3 1.3.9z"/></svg></div>
+      <div><p class="text-[11px] font-semibold tracking-wider text-gray-400">PHONE</p><p class="mt-0.5 text-[13.5px] font-medium text-dark">094168 16421</p></div>
+    </a>
+    <div class="flex items-center gap-4 py-8 sm:px-8">
+      <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal-light"><svg class="h-5 w-5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+      <div><p class="text-[11px] font-semibold tracking-wider text-gray-400">OFFICE HOURS</p><p class="mt-0.5 text-[13.5px] font-medium text-dark">Mon – Sat, 8:00 AM – 2:00 PM</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== FOOTER =============================== -->
+<footer class="bg-dark text-white">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.6fr_0.6fr_1fr] lg:px-10">
+    <div>
+      <p class="mb-2 font-serif text-[18px] font-bold">Swami Dayanand Saraswati</p>
+      <p class="text-[12px] font-medium tracking-wider text-white/40">SR. SEC. SCHOOL, BOLNI</p>
+      <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-white/40">Guiding students with discipline, values and quality academics for over 25 years in Bolni, Rewari, Haryana.</p>
+    </div>
+    <div>
+      <p class="mb-4 text-[11px] font-semibold tracking-widest text-white/25">QUICK LINKS</p>
+      <ul class="space-y-2.5 text-[13px] text-white/50"><li><a href="#top" class="hover:text-white">Home</a></li><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#why" class="hover:text-white">Why Us</a></li><li><a href="#academics" class="hover:text-white">Academics</a></li><li><a href="#notices" class="hover:text-white">Notices</a></li></ul>
+    </div>
+    <div>
+      <p class="mb-4 text-[11px] font-semibold tracking-widest text-white/25">CONTACT</p>
+      <ul class="space-y-2.5 text-[13px] text-white/50"><li><a href="tel:+919416816421" class="hover:text-white">094168 16421</a></li><li>Kseri-Motla Road, Bolni</li><li>Dist. Rewari, Haryana 123401</li></ul>
+    </div>
+    <div class="flex aspect-video items-center justify-center rounded-2xl border border-white/[0.08] bg-white/[0.03] sm:aspect-auto sm:min-h-[10rem]">
+      <div class="flex flex-col items-center gap-2 px-4 text-center text-white/20"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg><p class="text-[11px] leading-snug">Google Maps<br/>Kseri-Motla Road, Bolni</p></div>
+    </div>
+  </div>
+  <div class="border-t border-white/[0.06] px-6 py-5 lg:px-10"><p class="text-[11px] text-white/25">© <span id="year"></span> Swami Dayanand Saraswati Sr. Sec. School. All rights reserved.</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
