@@ -56,7 +56,7 @@ function initStickyScroll() {
         }
       });
     },
-    { threshold: 0.6, rootMargin: '-100px 0px -100px 0px' }
+    { threshold: 0.7, rootMargin: "-150px 0px -150px 0px" }
   );
   steps.forEach((s) => obs.observe(s));
   // Activate first by default
