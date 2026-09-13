@@ -1,0 +1,62 @@
+/* ============ HERO ENTRANCE ============ */
+.hero-el{opacity:0;transform:translateY(24px);animation:fadeUp .8s cubic-bezier(.22,1,.36,1) forwards}
+.hero-el:nth-child(1){animation-delay:.2s}
+.hero-el:nth-child(2){animation-delay:.4s}
+.hero-el:nth-child(3){animation-delay:.6s}
+.hero-el:nth-child(4){animation-delay:.8s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* ============ SCROLL REVEAL ============ */
+[data-animate]{opacity:0;transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}
+[data-animate].visible{opacity:1;transform:translate(0,0) scale(1)!important}
+[data-animate="fade-up"]{transform:translateY(50px)}
+[data-animate="fade-left"]{transform:translateX(-50px)}
+[data-animate="fade-right"]{transform:translateX(50px)}
+[data-animate="zoom-in"]{transform:scale(.9)}
+
+[data-stagger]>*{opacity:0;transform:translateY(35px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+[data-stagger].visible>*{opacity:1;transform:translateY(0)}
+[data-stagger].visible>*:nth-child(1){transition-delay:.08s}
+[data-stagger].visible>*:nth-child(2){transition-delay:.18s}
+[data-stagger].visible>*:nth-child(3){transition-delay:.28s}
+[data-stagger].visible>*:nth-child(4){transition-delay:.48s}
+[data-stagger].visible>*:nth-child(5){transition-delay:.48s}
+[data-stagger].visible>*:nth-child(6){transition-delay:.58s}
+[data-stagger].visible>*:nth-child(7){transition-delay:.68s}
+[data-stagger].visible>*:nth-child(8){transition-delay:.78s}
+[data-stagger].visible>*:nth-child(9){transition-delay:.88s}
+
+/* ============ PARALLAX FLOATING SHAPES ============ */
+.parallax-shape{position:absolute;pointer-events:none;will-change:transform;transition:transform .1s linear}
+
+/* ============ STICKY SCROLL SECTION ============ */
+.sticky-section{position:relative}
+.sticky-left{position:sticky;top:100px;height:fit-content}
+.sticky-img{border-radius:1rem;overflow:hidden;position:relative}
+.sticky-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0;transition:opacity .8s ease}
+.sticky-img img.active-img{opacity:1}
+.scroll-step{opacity:.35;transform:translateY(10px);transition:opacity .8s ease,transform .8s ease}
+.scroll-step.active-step{opacity:1;transform:translateY(0)}
+
+/* ============ MOBILE MENU ============ */
+#mobile-panel{max-height:0;transition:max-height .3s ease}
+#mobile-panel.open{max-height:28rem}
+
+/* ============ FOCUS ============ */
+a:focus-visible,button:focus-visible{outline:2px solid #0d7377;outline-offset:2px}
+
+/* ============ NAVBAR ============ */
+#navbar.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);box-shadow:0 1px 12px rgba(0,0,0,.06)}
+#navbar.scrolled #brand-main{color:#1a2744}
+#navbar.scrolled #brand-sub{color:rgba(26,39,68,.5)}
+#navbar.scrolled #nav-links{color:rgba(26,39,68,.55)}
+#navbar.scrolled #nav-links a:hover{color:#1a2744}
+#navbar.scrolled #nav-cta{background:#1a2744;color:#fff}
+#navbar.scrolled #menu-btn{color:#1a2744}
+
+/* ============ REDUCED MOTION ============ */
+@media(prefers-reduced-motion:reduce){
+  .hero-el,[data-animate],[data-stagger]>*,.scroll-step,.sticky-img img,.parallax-shape{
+    animation:none!important;opacity:1!important;transform:none!important;transition:none!important
+  }
+}
