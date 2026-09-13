@@ -4,42 +4,39 @@
 .hero-el:nth-child(2){animation-delay:.4s}
 .hero-el:nth-child(3){animation-delay:.6s}
 .hero-el:nth-child(4){animation-delay:.8s}
-
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 
-/* ============ SCROLL ANIMATIONS ============ */
-[data-animate]{
-  opacity:0;
-  transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
-}
+/* ============ SCROLL REVEAL ============ */
+[data-animate]{opacity:0;transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 [data-animate].visible{opacity:1;transform:translate(0,0) scale(1)!important}
+[data-animate="fade-up"]{transform:translateY(50px)}
+[data-animate="fade-left"]{transform:translateX(-50px)}
+[data-animate="fade-right"]{transform:translateX(50px)}
+[data-animate="zoom-in"]{transform:scale(.9)}
 
-[data-animate="fade-up"]{transform:translateY(40px)}
-[data-animate="fade-down"]{transform:translateY(-40px)}
-[data-animate="fade-left"]{transform:translateX(-40px)}
-[data-animate="fade-right"]{transform:translateX(40px)}
-[data-animate="zoom-in"]{transform:scale(.92)}
-[data-animate="zoom-out"]{transform:scale(1.08)}
+[data-stagger]>*{opacity:0;transform:translateY(35px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+[data-stagger].visible>*{opacity:1;transform:translateY(0)}
+[data-stagger].visible>*:nth-child(1){transition-delay:.06s}
+[data-stagger].visible>*:nth-child(2){transition-delay:.14s}
+[data-stagger].visible>*:nth-child(3){transition-delay:.22s}
+[data-stagger].visible>*:nth-child(4){transition-delay:.30s}
+[data-stagger].visible>*:nth-child(5){transition-delay:.38s}
+[data-stagger].visible>*:nth-child(6){transition-delay:.46s}
+[data-stagger].visible>*:nth-child(7){transition-delay:.54s}
+[data-stagger].visible>*:nth-child(8){transition-delay:.62s}
+[data-stagger].visible>*:nth-child(9){transition-delay:.70s}
 
-/* Stagger children: each child delays slightly more */
-[data-stagger] > *{
-  opacity:0;
-  transform:translateY(30px);
-  transition:opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1);
-}
-[data-stagger].visible > *{opacity:1;transform:translateY(0)}
-[data-stagger].visible > *:nth-child(1){transition-delay:.05s}
-[data-stagger].visible > *:nth-child(2){transition-delay:.12s}
-[data-stagger].visible > *:nth-child(3){transition-delay:.19s}
-[data-stagger].visible > *:nth-child(4){transition-delay:.26s}
-[data-stagger].visible > *:nth-child(5){transition-delay:.33s}
-[data-stagger].visible > *:nth-child(6){transition-delay:.40s}
-[data-stagger].visible > *:nth-child(7){transition-delay:.47s}
-[data-stagger].visible > *:nth-child(8){transition-delay:.54s}
-[data-stagger].visible > *:nth-child(9){transition-delay:.61s}
+/* ============ PARALLAX FLOATING SHAPES ============ */
+.parallax-shape{position:absolute;pointer-events:none;will-change:transform;transition:transform .1s linear}
 
-/* Counter number animation */
-.counter{display:inline-block;min-width:2ch}
+/* ============ STICKY SCROLL SECTION ============ */
+.sticky-section{position:relative}
+.sticky-left{position:sticky;top:100px;height:fit-content}
+.sticky-img{border-radius:1rem;overflow:hidden;position:relative}
+.sticky-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.sticky-img img.active-img{opacity:1}
+.scroll-step{opacity:.35;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+.scroll-step.active-step{opacity:1;transform:translateY(0)}
 
 /* ============ MOBILE MENU ============ */
 #mobile-panel{max-height:0;transition:max-height .3s ease}
@@ -59,5 +56,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #0d7377;outline-offset:2p
 
 /* ============ REDUCED MOTION ============ */
 @media(prefers-reduced-motion:reduce){
-  .hero-el,[data-animate],[data-stagger]>*{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}
+  .hero-el,[data-animate],[data-stagger]>*,.scroll-step,.sticky-img img,.parallax-shape{
+    animation:none!important;opacity:1!important;transform:none!important;transition:none!important
+  }
 }
